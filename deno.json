@@ -1,14 +1,14 @@
 {
   "importMap": "./deno.map.json",
   "compilerOptions": {
-    "types": ["./ts/types"],
+    "types": ["./ts/types.d.ts"],
     "lib": ["deno.window", "dom"],
     "checkJs": true
   },
   "tasks": {
     "dev": "deno task fmt & deno task serve & deno task test",
-    "fmt": "deno fmt --watch --no-lock --no-check",
-    "serve": "deno run -A --unstable --no-lock --no-check https://deno.land/std@0.167.0/http/file_server.ts",
+    "fmt": "deno fmt --watch",
+    "serve": "deno run -A --unstable --no-check https://deno.land/std@0.167.0/http/file_server.ts",
     "test": "deno test ts/test.ts --watch --no-lock --no-check"
   }
 }
